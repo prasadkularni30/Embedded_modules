@@ -1,0 +1,70 @@
+DEVICE DRIVERS COMMANDS
+
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf-
+
+scp -r mod31.ko debian@192.168.7.2:~/3/.
+
+scp -r mod31.ko debian@192.168.7.2:~/
+
+sudo insmod mod32.ko
+
+dmesg -w
+
+sudo rmmod mod32.ko
+
+cat /proc/devices         //for see loaded devices major and device name
+
+ ls | grep 202            //for see perticular 
+ 
+ cd /dev -> how to see no. of devices -> cd ~ -> go to home directory and go to -> cd /dev then here you see devices
+ 
+ ## ioctl:- 3 files ioctl.c , ioctl.h , app.c :- send all three files through scp to debian then
+ in makefile add only ioctl.o (in other word only .c file i.e .o file only add in makefile)
+ 1) gcc app.c
+ 2) sudo insmod ioctl.ko
+ 3) sudo ./a.out
+
+##
+mod1: basic driver
+mod2: module params - w/ and w/o callback
+mod3: char driver, major:minor, device node, cdev, fops, data Xchange
+mod4: multi-file module
+mod5: EXPORT_SYMBOL 
+mod6: ioctl
+mod7: kernel timers, HR timers
+mod8: kthreads, completions, kthreads sharing, mutex, spinlock, rwlock, seqlock
+mod9: kernel linked list
+mod10: sysfs entry creation (dir, file)
+mod11: GPIOs, IRQs
+mod12: deferred work - tasklets, workqueues
+mod13: i2c-client driver
+mod14: USB driver
+mod15: SPI userspace driver
+
+All code tested on BBB running kernel 5.10.168-ti-r72
+
+## how to use sysfs -> follow following steps -> first open three terminals -> two debian one desd
+1) sudo insmod mod10.ko
+2) cd /sys/kernel
+3) ls
+4) cd my_sysfs/
+5) ls
+6) cd ~
+7) sudo rmmod mod10.ko
+8) cd /sys/kernel
+9) ls
+
+## I2C
+1) cd mod13
+2) scp -r i2c_stub.ko mod13.ko debian@192.168.7.2:~/
+3) ls
+   i2c-stub.ko  mod10.ko  mod13.ko
+4) i2cdetect -l
+5) sudo insmod i2c-stub.ko chip_addr=0x45
+6) i2cdetect -l
+7) i2cdetect -y 3
+8) i2cdump -y -a 3 0x45
+9) i2cset -y -a 3 0x45 0x00 0x55
+10) i2cdump -y -a 3 0x45
+
+

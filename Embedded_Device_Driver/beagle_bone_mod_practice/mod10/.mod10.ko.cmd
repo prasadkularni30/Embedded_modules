@@ -1,0 +1,1 @@
+cmd_/home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod10/mod10.ko := ld -r  -m elf_x86_64 -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod10/mod10.ko /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod10/mod10.o /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod10/mod10.mod.o;  true

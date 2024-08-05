@@ -1,0 +1,40 @@
+
+EDD Assgmt #3: LKM - Kernel LLs
+
+Write an LKM that accepts following details of a person:
+1. Name (string, char[10])
+2. Address (string, char[50])
+3. National ID (2 characters + 4 digits)
+from a user application via write() calls.
+
+Legal values for characters in National ID:
+{ "AB", "CD", "EF", "GH"}
+
+Examples of legal National IDs:
+AB7565, CD5494, EF9595, GH9202, AB0001, etc.
+
+Examples of illegal National IDs:
+FR3949, ZZ0901, AB900, CD1, GH69504
+
+The LKM should add the input details to 4 possible kernel linked lists depending on the results of parsing the National ID.
+Illegal National IDs should be flagged (printed in dmesg) and the person details should be added to a 5th kernel linked list.
+
+Implement IOCTL commands from user space that can make the module print contents of each kernel linked list:
+DISP_AB, DISP_CD, DISP_EF, DISP_GH, DISP_ERR_LIST
+
+Example dmesg display entries:
+[..] AB list:
+[..] John Doe, 1344 N Road, AB3422
+[..] Jill Jane, 900 W Free Ckt, AB9020
+
+[..] CD list:
+[..] Amit S, Flat 45, Central lane, Mumbai, CD4993 
+
+Implement an IOCTL (CLEANUP) to delete all linked lists.
+
+If user does not issue CLEANUP, the module should do so when it exits / unloads.
+
+Test the entire setup for atleast 50 entries - it will be easier to supply canned (hard-coded) arrays of name, address and National ID strings from user space (of the form char *name[N], etc). All corner cases and error conditions should be handled. Module should load and unload cleanly.
+
+Extra credit:
+Implement IOCTLs to get each kernel linked list data back to user space and print on user console.

@@ -1,0 +1,1 @@
+cmd_/home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod_prime/mod_prime.ko := arm-linux-gnueabihf-ld -r  -EL -z noexecstack   --build-id=sha1  -T scripts/module.lds -o /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod_prime/mod_prime.ko /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod_prime/mod_prime.o /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod_prime/mod_prime.mod.o;  true

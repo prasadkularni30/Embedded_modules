@@ -1,0 +1,64 @@
+Q1: Implement a hotel portal with menu-driven singly linked list with the following options to the user:   
+•	Following data should be taken as input from the user
+o	Name
+o	Id Number
+o	Date of check-in (in DD:MM:YYYY)
+o	Time of check-in (24-hour format)
+•	Implement add_visitor, search, show all, delete and exit a given visitor data from the list.
+•	Implement an add_visitor(…) function along with other functions, which should take the input from user and store the node in sorted manner in the list based on time of their checking-in.
+•	Make sure there should be no duplicate ID number entry in the list.
+•	Implement a counter on the menu page to show how many of visitors are currently present in the list.
+•	Code implementation should be neat and logic should be clear, time and space complexity are to be taken into consideration as well.
+
+==============================================================================================================================
+Q2: Using singly linked list, implement a queue of max depth of 10, implement enqueue, dequeue and delete queue functions for the same. 
+
+==============================================================================================================================
+Q1: Implement a menu-driven school portal using sorted doubly linked list with following functionality:   
+•	Following data should be taken as input from the user
+o	Name
+o	Age
+o	Roll number (should be unique)
+o	Address
+•	Implement add, search, modify, show all, delete and exit a given student data from the list.
+•	Implement an add_node(…) function along with other functions, which should take the input from user and store the node in sorted manner in the list based on roll numbers
+•	Make sure there should be no duplicate roll number entry in the list.
+•	Implement a counter on the menu page to show how many of students are currently present in the list.
+•	Code implementation should be neat and logic should be clear, time and space complexity are to be taken into consideration as well.
+==============================================================================================================================
+Q2: Using singly linked list, implement a stack of max depth of 10, implement push, pop and delete stack functions for the same. 
+
+
+==============================================================================================================================
+Q.1. Write a Menu driven Linked List Program in C language to store Flat Owner information’s with
+mentioned below functionalities.
+
+A Linked list node contains following fields for Flat owner
+owner_name,
+building_name ( eg. A/B/C/D )
+flat_number ( a four digit number: eg 1101, 0203, whereas first 2 digits indicates floor number )
+society_name,
+pin_code ( a six digit number ) 
+Function - User can Add, Display, Search and Delete Flat owner info. 
+Search and Delete flat owner by flat_number
+Design Menu Driven Program ( Using Switch-cases ) 
+Write appropriate comments 
+
+
+==============================================================================================================================
+Q1: Implement a menu-driven employee database using sorted doubly linked list with following functionality: 
+* Following data should be taken as input from the user (Take the datatypes carefully and efficiently)
+o Employee Name
+o Employee ID (Unique ID of 4 digit)
+o Gender
+o Designation (Post)
+* Implement add, search, modify, show all, delete and exit a given Employee ID’s data from the list.
+* Implement an add_node(…) function along with other functions, which should take the input from user and store the node in sorted manner in the list based on Employee ID.
+* Make sure there should be no duplicate Employee ID entry in the list.
+* Implement a counter on the menu page to show how many of employees are currently employed in the organization.
+* In exit function, implement the functionality to delete complete database and deallocate all the memory.
+* Code implementation should be neat and logic should be clear, time and space complexity are to be taken into consideration as well.
+==============================================================================================================================
+Q2: Write a program to implement a queue for management of crowd at a movie counter which has a capacity of 8 customer at a time. Implement add_in_queue( ) function for enqueue operation. If the number of customers are more than 8 then a warning of “Limit exceeded” should be displayed.
+* Write a function remove_customer( ) to remove the customer from the front end of the queue when he / she gets the ticket (dequeue() functionality).
+* Write a function for counter_closed( ) with the functionality that no customer should be present at the counter (Exit( ) functionality).

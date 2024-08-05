@@ -1,0 +1,1 @@
+cmd_/home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod6_9_ioctl_link/Module.symvers := sed 's/ko$$/o/' /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod6_9_ioctl_link/modules.order | scripts/mod/modpost -m    -o /home/desd/pmarch_2024/Prasad_K/EDD/bb-codes/mod6_9_ioctl_link/Module.symvers -e -i Module.symvers   -T -
