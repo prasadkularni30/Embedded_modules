@@ -1,0 +1,152 @@
+import sys
+#variables
+x=10
+y=x
+
+print(f"id(y):{id(y)},id(x):{id(x)}")
+print(y,x)
+y=20
+print(y,x)
+print(f"id(y):{id(y)},id(x):{id(x)}")
+
+y=id(x)
+print(y,x)
+print(f"id(y):{id(y)},id(x):{id(x)}")
+print(f"type y: {type(y)} x: {type(x)}")
+x=257
+y=257
+print(f"id(y):{id(y)},id(x):{id(x)}")
+print(sys.getsizeof(y))
+y=10
+print(sys.getsizeof(y))
+
+x=-10
+y=-10
+print(f"id(y):{id(y)},id(x):{id(x)}")
+
+x="krushna"
+y="krushna"
+print(f"id(y):{id(y)},id(x):{id(x)}")
+y="prasad"
+print(f"id(y):{id(y)}")
+x=20
+print(f"id(x):{id(x)}")
+x=21
+print(f"id(x):{id(x)}")
+
+#list
+
+list =[1,2,3]
+print(list)
+
+l=[4,5,6]
+print(l)
+print(id(l))
+l[0]=7
+print(l)
+print(id(l[0]))
+print(id(l))
+
+
+l=[3,4]
+print(l)
+print(id(l))
+print(id(l[0]))
+print(l[1])
+
+l[0]=[6,7]
+print(l)
+print(l[0])
+print(l[0][1])
+
+l.append(5)
+print(l)
+
+l=["prasad","krushna","ankush","lalit","yadnesh"]
+print(l)
+print(l[0])
+print(l[0][0])
+
+l=[["prasad","krushna"],"ankush","lalit","yadnesh"]
+print(l)
+print(l[0])
+print(l[3][0])
+print(l[2])
+
+l=[["prasad","krushna"],["ankush","lalit","yadnesh"]]
+print(l)
+print(l[0])
+print(l[1][0][2])
+print(l[1])
+
+#for loop in 2D list (nested list)
+
+for index in l:
+    if index == ["prasad","krushna"]:
+        print("found: ",index)
+        print(type(index))
+        
+
+# for loop in list
+l=["prasad","krushna","ankush","lalit","yadnesh"]
+for index in l:
+    if index == "prasad":
+        print("found: ",index)
+        print(type(index))
+        
+        
+#Wrong enumerate but works
+for index,subject in enumerate(index):
+    print(f"index is{index} and data is {subject}")
+        
+#enumerate gives index and data at the index
+for index,subject in enumerate(l):
+    print(f"index is {index} and data is {subject}")
+
+#printing index of data
+print(l.index('krushna'))
+
+#printing reverse
+print(l[-1])
+
+name='krushna'
+print(name)
+print(name[2])
+print(name[-1])
+
+#slicing of list
+data=[1,2,3,4,5]
+sub_data= data[2:4]
+print(sub_data)
+
+sub_data= data[1:-1]
+print(sub_data)
+
+sub_data= data[1:]
+print(sub_data)
+
+sub_data= data[-3:4]
+print(sub_data)
+
+print(data[1:4])
+
+#shallow copy
+
+import copy
+l1 = [1,2,3]
+l2 = l1
+print(l1)
+print(l2)
+l2.append(4)
+print(l2)
+print("**********l1*********",l1)
+
+#deep copy
+
+l3 = copy.deepcopy(l1)
+l3.append(100)
+print("-----l1-----",l1)
+print("----l3-----",l3)
+
+
+

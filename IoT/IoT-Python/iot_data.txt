@@ -1,0 +1,6 @@
+{
+    "name" : "Shubham Pujari",
+    "Address" : "Panchavati",
+    "Course" : "DESD",
+    "PRN" : 47
+}
